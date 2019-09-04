@@ -10,14 +10,24 @@ public class Loader
         Cat three = new Cat();
         Cat four = new Cat();
         Cat five = new Cat();
+        tom.color = Color.PURPUR.toString();
 
+        Cat.showCount();
         System.out.println(tom.getStatus());
         one.meow();
+
+
         System.out.println("Кошка еще не пила");
         System.out.println(two.getStatus());
-        two.drink(two.getWeight());
+        System.out.println("Вес до выпивания: " + two.getWeight());
+        two.drink(1000.00);
         System.out.println("Кошка напилась: " + two.getStatus());
-
+        System.out.println("Вес после выпивания: " + two.getWeight());
+        System.out.println("Кошка сожрала: " + two.getWasted(two.getWeight()));
+        System.out.println("Кошка 3 хочет пипи ");
+        System.out.println("Вес до туалета: " + three.getWeight());
+        three.wentTotoilet(three.getWeight());
+        System.out.println("Вес после туалета: " + three.getWeight());
         System.out.println("Вес котиков");
         System.out.println("Вес тома: " + tom.getWeight());
         System.out.println("Вес бара: " + bar.getWeight());
@@ -26,21 +36,23 @@ public class Loader
         System.out.println("Вес третьего: " + three.getWeight());
         System.out.println("Вес четвертого: " + four.getWeight());
         System.out.println("Вес пятого: " + five.getWeight());
-
+        System.out.println("Сколько кошек: " + Cat.count);
 
         System.out.println("Взрываем Тома");
-        while (tom.getWeight() < tom.maxWeight)
+        while (tom.getWeight() < Cat.MAX_WEIGHT)
         {
             tom.feed(tom.getWeight());
             System.out.println(tom.getWeight());
             System.out.println(tom.getStatus());
         }
 
-        while (bar.getStatus() != "Dead")
-        {
-            bar.meow();
-        }
-        System.out.println(bar.getStatus());
+        Cat.showCount();
+        System.out.println(tom.color);
+     //   while (bar.getStatus() != "Dead")
+  //      {
+    //        bar.meow();
+    //    }
+    //    System.out.println(bar.getStatus());
 
 
 
