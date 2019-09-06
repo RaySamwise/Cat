@@ -3,17 +3,18 @@ public class Loader
 {
     public static void main(String[] args)
     {
+        //Создаем кошку через новый конструктор
+        Cat five = new Cat(4000);
         Cat tom = new Cat();
         Cat bar = new Cat();
         Cat one = new Cat();
         Cat two = new Cat();
         Cat three = new Cat();
         Cat four = new Cat();
-        Cat five = new Cat();
         tom.color = Color.PURPUR.toString();
-
-        Cat.showCount();
         System.out.println(tom.getStatus());
+        Cat.showCount();
+
         one.meow();
 
 
@@ -26,7 +27,7 @@ public class Loader
         System.out.println("Кошка сожрала: " + two.getWasted(two.getWeight()));
         System.out.println("Кошка 3 хочет пипи ");
         System.out.println("Вес до туалета: " + three.getWeight());
-        three.wentTotoilet(three.getWeight());
+        three.wentToToilet(three.getWeight());
         System.out.println("Вес после туалета: " + three.getWeight());
         System.out.println("Вес котиков");
         System.out.println("Вес тома: " + tom.getWeight());
@@ -39,15 +40,22 @@ public class Loader
         System.out.println("Сколько кошек: " + Cat.count);
 
         System.out.println("Взрываем Тома");
-        while (tom.getWeight() < Cat.MAX_WEIGHT)
+        while (tom.isAlive)
         {
             tom.feed(tom.getWeight());
             System.out.println(tom.getWeight());
             System.out.println(tom.getStatus());
         }
-
         Cat.showCount();
-        System.out.println(tom.color);
+
+        System.out.println("Первый домяукает до смерти");
+        while (one.isAlive)
+        {
+            one.meow();
+            System.out.println(one.getStatus());
+        }
+        Cat.showCount();
+
      //   while (bar.getStatus() != "Dead")
   //      {
     //        bar.meow();
