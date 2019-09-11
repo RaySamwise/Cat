@@ -27,6 +27,11 @@ public class Cat
      this.weight = weight;
     }
 
+    public void setColor(String color)
+    {
+        this.color = color;
+    }
+
     public void wentToToilet(double weight)
     {
         this.weight = weight - 100 ;
