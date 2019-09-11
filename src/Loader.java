@@ -3,8 +3,6 @@ public class Loader
 {
     public static void main(String[] args)
     {
-        //Создаем кошку через новый конструктор
-        Cat five = new Cat(4000);
         Cat tom = new Cat();
         Cat bar = new Cat();
         Cat one = new Cat();
@@ -24,7 +22,7 @@ public class Loader
         two.drink(1000.00);
         System.out.println("Кошка напилась: " + two.getStatus());
         System.out.println("Вес после выпивания: " + two.getWeight());
-        System.out.println("Кошка сожрала: " + two.getWasted(two.getWeight()));
+        System.out.println("Кошка сожрала: " + two.getWasted());
         System.out.println("Кошка 3 хочет пипи ");
         System.out.println("Вес до туалета: " + three.getWeight());
         three.wentToToilet(three.getWeight());
@@ -36,7 +34,6 @@ public class Loader
         System.out.println("Вес второго: " + two.getWeight());
         System.out.println("Вес третьего: " + three.getWeight());
         System.out.println("Вес четвертого: " + four.getWeight());
-        System.out.println("Вес пятого: " + five.getWeight());
         System.out.println("Сколько кошек: " + Cat.count);
 
         System.out.println("Взрываем Тома");
@@ -63,6 +60,13 @@ public class Loader
     //    System.out.println(bar.getStatus());
 
 
+      creation();
+    }
 
+    public static void creation()
+    {
+        //Создаем кошку через новый конструктор
+        Cat newCat = new Cat(4000);
+        System.out.println("Новая кошка весит: " + newCat.getWeight());
     }
 }

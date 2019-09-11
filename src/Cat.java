@@ -10,7 +10,7 @@ public class Cat
     public static final int LEGS_COUNT = 4;
     public static final int MAX_WEIGHT = 9000;
     public static final int MIN_WEIGHT = 1000;
-    public static final int EYES_COUNT = 4;
+    public static final int EYES_COUNT = 2;
 
     public Cat()
     {
@@ -37,7 +37,7 @@ public class Cat
         }
     }
 
-    public double getWasted(double weight)
+    public double getWasted()
     {
      double wastedAmt = weight - originWeight;
      return wastedAmt;
