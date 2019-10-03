@@ -64,11 +64,13 @@ public class Loader
       Cat Jeck = new Cat();
 
       //Глубокая копия Джека
-        System.out.println(Jeck.getColor());
-        System.out.println(Jeck.getWeight());
+        System.out.println("Только что созданный кот: " + Jeck.getColor());
+        System.out.println("Только что созданный кот: " + Jeck.getWeight());
 
-        System.out.println(copyCat(Jeck).getColor());
-        System.out.println(copyCat(Jeck).getWeight());
+        System.out.println("Цвет копии: " + copyCat(Jeck).getColor());
+        System.out.println("Вес копии: " + copyCat(Jeck).getWeight());
+
+        System.out.println("Вес копии через другой метод: " + Jeck.copyInner().getWeight());
     }
 
     public static void creation()

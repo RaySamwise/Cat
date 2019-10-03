@@ -133,9 +133,15 @@ public class Cat
         else {
             return "Playing";
         }
+
+    }
+    public Cat copyInner()
+    {
+        Cat nov = new Cat();
+        nov.setWight(this.getWeight());
+        nov.setColor(this.getColor());
+        nov.setIsAlive(this.getIsAlive());
+        return nov;
+    }
     }
 
-
-
-
-}
