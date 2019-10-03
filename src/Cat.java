@@ -2,22 +2,22 @@
 public class Cat
 {
 
-    private double originWeight;
-    private double weight;
-    public String color;
+    public double originWeight;
+    public double weight;
     public Boolean isAlive = false;
     public static int count = 0;
     public static final int LEGS_COUNT = 4;
     public static final int MAX_WEIGHT = 9000;
     public static final int MIN_WEIGHT = 1000;
     public static final int EYES_COUNT = 2;
+    public Color color = Color.RED;  //Default color
 
     public Cat()
     {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         isAlive = true;
-        color =  Color.RED.toString();
+        this.color =  Color.RED;
         count = count + 1;
     }
 
@@ -27,9 +27,24 @@ public class Cat
      this.weight = weight;
     }
 
-    public void setColor(String color)
+    public void setColor(Color color)
     {
         this.color = color;
+    }
+
+    public Color getColor()
+    {
+        return color;
+    }
+
+    public void setIsAlive(Boolean isAlive)
+    {
+        this.isAlive = isAlive;
+    }
+
+    public Boolean getIsAlive()
+    {
+        return isAlive;
     }
 
     public void wentToToilet(double weight)
@@ -99,6 +114,10 @@ public class Cat
     {
         return weight;
     }
+    public void setWight(Double weight)
+    {
+        this.weight = weight;
+    }
 
     public String getStatus()
     {
@@ -115,4 +134,8 @@ public class Cat
             return "Playing";
         }
     }
+
+
+
+
 }

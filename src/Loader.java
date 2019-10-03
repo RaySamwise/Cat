@@ -9,7 +9,7 @@ public class Loader
         Cat two = new Cat();
         Cat three = new Cat();
         Cat four = new Cat();
-        tom.color = Color.PURPUR.toString();
+        tom.color = Color.PURPUR;
         System.out.println(tom.getStatus());
         Cat.showCount();
 
@@ -61,6 +61,14 @@ public class Loader
 
 
       creation();
+      Cat Jeck = new Cat();
+
+      //Глубокая копия Джека
+        System.out.println(Jeck.getColor());
+        System.out.println(Jeck.getWeight());
+
+        System.out.println(copyCat(Jeck).getColor());
+        System.out.println(copyCat(Jeck).getWeight());
     }
 
     public static void creation()
@@ -68,5 +76,14 @@ public class Loader
         //Создаем кошку через новый конструктор
         Cat newCat = new Cat(4000);
         System.out.println("Новая кошка весит: " + newCat.getWeight());
+    }
+    public static Cat copyCat(Cat cat)
+    {
+        Cat newCat = new Cat();
+        newCat.color = cat.getColor();
+        newCat.weight = cat.getWeight();
+        newCat.isAlive = cat.getIsAlive();
+
+        return newCat;
     }
 }
