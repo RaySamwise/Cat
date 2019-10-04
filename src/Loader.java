@@ -85,7 +85,7 @@ public class Loader
         newCat.color = cat.getColor();
         newCat.weight = cat.getWeight();
         newCat.isAlive = cat.getIsAlive();
-
+        newCat.originWeight = cat.getOriginWeight();
         return newCat;
     }
 }

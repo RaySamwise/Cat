@@ -37,6 +37,16 @@ public class Cat
         return color;
     }
 
+    public void setOriginWeight(Double weight)
+    {
+        this.weight = weight;
+    }
+
+    public Double getOriginWeight()
+    {
+        return weight;
+    }
+
     public void setIsAlive(Boolean isAlive)
     {
         this.isAlive = isAlive;
@@ -141,6 +151,7 @@ public class Cat
         nov.setWight(this.getWeight());
         nov.setColor(this.getColor());
         nov.setIsAlive(this.getIsAlive());
+        nov.setOriginWeight(this.getOriginWeight());
         return nov;
     }
     }
